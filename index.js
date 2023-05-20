@@ -1,6 +1,6 @@
 // include dependencies
-const Tone = require("Tone");
-const MidiConvert = require("MidiConvert");
+//const Tone = require("Tone");
+//const MidiConvert = require("MidiConvert");
 
 // set DOM objects
 const inputContainer = document.querySelector("#input-container");
@@ -8,7 +8,12 @@ const fileInputDisplayText = document.querySelector("#file-input-display-text");
 const playButton = document.querySelector("#play-button");
 
 // create synth
-var synth = new Tone.PolySynth(10).toMaster();
+//var synth = new Tone.PolySynth(10).toMaster();
+var synth = new Tone.PolySynth(10, Tone.Synth).toMaster();
+//set the attributes using the set interface
+synth.set("detune", -1200);
+//play a chord
+synth.triggerAttackRelease(["C4", "E4", "A4"], "4n");
 
 function selectMidiSong(file) {
 

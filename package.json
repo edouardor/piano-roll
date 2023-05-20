@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/Max-Y-Huang/Piano-Roll#readme",
   "devDependencies": {
-    "electron": "^9.4.0",
-    "electron-packager": "^13.0.1"
+    "electron": "^11.0.0",
+    "electron-packager": "^15.3.0"
   },
   "dependencies": {
     "midiconvert": "^0.4.7",
